@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tore of DOM</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <style>
+      li {
+        color: tomato;
+      }
+      #fruits-title {
+        color: #000;
+      }
+      .importent-places {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my DOM</h1>
+    </header>
+    <main>
+      <h1>My Awesome DOM de Babab</h1>
+      <ul>
+        <li>Jalali Set</li>
+        <li>Shafayet</li>
+        <li>Bonobash</li>
+      </ul>
+    </main>
+    <section>
+      <h1 id="fruits-title">Fruits I like</h1>
+      <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Carrot</li>
+      </ul>
+    </section>
+    <section>
+      <h1 id="places-title">Place I like to visit</h1>
+      <li class="importent-places">Sundarban</li>
+      <li class="importent-places">Bandarban</li>
+      <li class="importent-places">Shalbon</li>
+    </section>
+
+    <script src="js/dom.js"></script>
+    <script>
+      // console.log("Inside js the html");
+
+      const places = document.getElementsByClassName("importent-places");
+      console.log(places);
+      for (const place of places) {
+        console.log(place.innerText);
+      }
+
+      const fruitsTitel = document.getElementById("fruits-title");
+      fruitsTitel.innerText = "Fruits title changed by JS";
+    </script>
+  </body>
+</html>

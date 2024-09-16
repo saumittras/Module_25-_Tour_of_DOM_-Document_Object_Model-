@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour of DOM</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <style>
+      .fruits-container li {
+        color: tomato;
+      }
+      #fruits-title {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to my DOM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi blanditiis
+        dolorum voluptas? Accusantium sit minus laborum perferendis esse quia
+        alias aspernatur, itaque enim saepe cupiditate vel ut eum culpa quis!
+      </p>
+    </header>
+    <main>
+      <h1>My Awesome DOM de baba</h1>
+      <ul>
+        <li>Jalali Set</li>
+        <li>Shafayet</li>
+        <li>Bonobash</li>
+        <li>DOM de re baba</li>
+      </ul>
+
+      <section class="fruits-container">
+        <h1 id="fruits-title">Fruits I like</h1>
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>Carrot</li>
+        </ul>
+      </section>
+      <section>
+        <h1 id="places-title">Places I like to visit</h1>
+        <ul>
+          <li class="important-places">Soondarban</li>
+          <li class="important-places">Bandarban</li>
+          <li class="important-places">katabon</li>
+          <li class="other-place">shalbon</li>
+        </ul>
+      </section>
+    </main>
+    <script src="./js/dom.js"></script>
+    <script>
+      // const student = {
+      //   name: "Abul",
+      //   ID: 11,
+      //   study: function (time) {
+      //     console.log("Stydy korteche");
+      //   },
+      // };
+
+      // Methode 01: getElementByTagName()-----Optional
+      const liCollection = document.getElementsByTagName("li");
+      // console.log(liCollection);
+      for (const li of liCollection) {
+        // console.log(li.innerHTML);
+      }
+      const allHeading = document.getElementsByTagName("h1");
+      for (const h of allHeading) {
+        // console.log(h.innerText);
+      }
+
+      // Methode 02: getElementById() ----- will used Mostly
+      const parseplace = document.getElementById("places-title");
+      const fruitsTitle = document.getElementById("fruits-title");
+      fruitsTitle.innerText = "Fruits change by JS";
+
+      //Methode 03: getElementByClassName()----- will used mostly
+      const places = document.getElementsByClassName("important-places");
+      for (const place of places) {
+        console.log(place.innerText);
+      }
+
+      // Methode 04: querySelectorAll()---- will used special cases return all element
+      const someLi = document.querySelectorAll(".fruits-container li");
+      // console.log(someLi);
+      for (const li of someLi) {
+        console.log(li.innerText);
+      }
+
+      // Methode 05: querySelector()---- will used special cases. it will return only 1st element
+
+      const qs = document.querySelector(".fruits-container li");
+    </script>
+  </body>
+</html>
