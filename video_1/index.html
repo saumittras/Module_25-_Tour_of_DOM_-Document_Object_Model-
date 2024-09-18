@@ -24,13 +24,15 @@
       </p>
     </header>
     <main>
-      <h1>My Awesome DOM de baba</h1>
-      <ul>
-        <li>Jalali Set</li>
-        <li>Shafayet</li>
-        <li>Bonobash</li>
-        <li>DOM de re baba</li>
-      </ul>
+      <section>
+        <h1>My Awesome DOM de baba</h1>
+        <ul>
+          <li>Jalali Set</li>
+          <li>Shafayet</li>
+          <li>Bonobash</li>
+          <li>DOM de re baba</li>
+        </ul>
+      </section>
 
       <section class="fruits-container">
         <h1 id="fruits-title" class="some-class random-class blue-bg">
@@ -42,7 +44,7 @@
           <li>Carrot</li>
         </ul>
       </section>
-      <section>
+      <section id="places-container">
         <h1 id="places-title">Places I like to visit</h1>
         <ul>
           <li class="important-places">Soondarban</li>
@@ -53,6 +55,7 @@
       </section>
     </main>
     <script src="./js/dom.js"></script>
+    <script src="js/styleinjs.js"></script>
     <script>
       // const student = {
       //   name: "Abul",
@@ -81,14 +84,14 @@
       //Methode 03: getElementByClassName()----- will used mostly
       const places = document.getElementsByClassName("important-places");
       for (const place of places) {
-        console.log(place.innerText);
+        // console.log(place.innerText);
       }
 
       // Methode 04: querySelectorAll()---- will used special cases return all element
       const someLi = document.querySelectorAll(".fruits-container li");
       // console.log(someLi);
       for (const li of someLi) {
-        console.log(li.innerText);
+        // console.log(li.innerText);
       }
 
       // Methode 05: querySelector()---- will used special cases. it will return only 1st element

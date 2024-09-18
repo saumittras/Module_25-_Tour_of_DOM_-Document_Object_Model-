@@ -4,3 +4,10 @@ h1 {
 .important-places {
   color: blueviolet;
 }
+.learge-text {
+  font-size: 2em;
+}
+
+.text-center {
+  text-align: center;
+}
